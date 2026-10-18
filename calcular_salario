@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	
+float horas;
+float valorHora;
+float salario; 	 	
+
+
+printf("Digite as horas trabalhadas no mês:\n");
+scanf("%f", &horas);
+
+printf("Digite o valor da hora:\n");
+scanf("%f", &valorHora);
+
+if (horas > 160){
+	salario = (160 * valorHora)+ ((horas - 160)* valorHora * 1.5);
+}
+else
+{
+	salario = horas * valorHora;
+}
+
+printf("Salário total: R$ %2.f\n", salario);
+
+
+
+	
+	
+	return 0;
+} 
